@@ -39,6 +39,11 @@ class CustomModel(nn.Module):
         padded_states[:, :seq_length, :] = hidden_states
         return padded_states
 
+
+# Set up device
+print(torch.cuda.is_available())
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 # Instantiate DNABERT tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained("zhihan1996/DNABERT-2-117M", trust_remote_code=True)
 bert_model = AutoModel.from_pretrained("zhihan1996/DNABERT-2-117M", trust_remote_code=True).to(device)
