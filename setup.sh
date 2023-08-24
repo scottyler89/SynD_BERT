@@ -18,4 +18,5 @@ pip install scipy>1.4
 pip install triton==2.0.0.dev20221030
 
 
-git clone https://github.com/Zhihan1996/DNABERT_2
+#git clone https://github.com/Zhihan1996/DNABERT_2
+git clone https://github.com/scottyler89/SynD_BERT
